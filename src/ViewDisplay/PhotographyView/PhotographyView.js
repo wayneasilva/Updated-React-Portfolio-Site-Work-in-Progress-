@@ -6,14 +6,51 @@ const photoView = () => {
         test: {
             margin: '0',
             padding: '0',
-            width: 'calc(100vw - 75px)',
-            height: '100vh',
-            backgroundColor: 'green'
+            // width: 'calc(100% - 75px)',
+            // height: '100vh',
+            backgroundColor: 'yellow',
+
+            '@media (max-width: 900px)': {
+                width: '100%'
+            }
+        },
+
+        h1: {
+            margin: '0',
+            padding: '0'
         }
     }
 
     return (
-        <h1 style={style.test}>View Route</h1>
+        <div style={style.test}>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+            <h1 style={style.h1}>View Route</h1>
+        </div>
     )
 }
 

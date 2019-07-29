@@ -6,10 +6,14 @@ const contactView = () => {
         test: {
             margin: '0',
             padding: '0',
-            width: 'calc(100vw - 75px)',
-            height: '100vh',
-            backgroundColor: 'red'
-        }
+            // width: 'calc(100% - 75px)',
+            // height: '100vh',
+            backgroundColor: 'red',
+
+            '@media (max-width: 900px)': {
+                width: '100%'
+            }
+        },
     }
 
     return (

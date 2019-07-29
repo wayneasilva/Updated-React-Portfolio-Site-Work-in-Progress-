@@ -13,10 +13,14 @@ const mainView = () => {
             width: 'calc(100vw - 75px)',
             height: '100vh',
             // backgroundColor: '#2d1577',
+
+            '@media (max-width: 900px)': {
+                width: '100%'
+            }
         },
 
         headerStyle: {
-            
+            textAlign: 'center'
         },
 
         h1Style: {
@@ -24,7 +28,19 @@ const mainView = () => {
             fontSize: '8rem',
             margin: '0',
             // transform: 'rotate(90deg)',
-	        // transformOrigin: 'left top 0',
+            // transformOrigin: 'left top 0',
+            
+            '@media (max-width: 900px)': {
+                fontSize: '8rem'
+            },
+
+            '@media (max-width: 640px)': {
+                fontSize: '6rem'
+            },
+
+            '@media (max-width: 440px)': {
+                fontSize: '4rem'
+            }
         },
 
         h2DivStyle: {
@@ -66,11 +82,12 @@ const mainView = () => {
             <Spacer />
             <Spacer />
             <header style={style.headerStyle}>
-                <h1 style={style.h1Style}>Ali K. Allen</h1>
+                <h1 style={style.h1Style}>Wayne Silva</h1>
                 <div style={style.h2DivStyle}>
-                    <h2 style={style.h2Style}>#Videographer</h2>
-                    <h2 style={style.h2Style}>#Photographer</h2>
-                    <h2 style={style.h2Style}>#Producer</h2>
+                    <h2 style={style.h2Style}>#HTML</h2>
+                    <h2 style={style.h2Style}>#CSS</h2>
+                    <h2 style={style.h2Style}>#JAVASCRIPT</h2>
+                    <h2 style={style.h2Style}>#REACT</h2>
                 </div>
                 <div style={style.bookButtonDiv}>
                     <div style={style.bookButton}>BOOK NOW</div>

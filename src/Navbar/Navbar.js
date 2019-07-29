@@ -2,42 +2,53 @@ import React from 'react';
 import Radium from 'radium';
 import {Link} from 'react-router-dom';
 import MainIcon from '../images/user.svg';
-import VideoIcon from '../images/video-camera.svg';
-import PhotoIcon from '../images/photo-camera.svg';
-import EditingIcon from '../images/premiere.svg';
+import VideoIcon from '../images/github-logo.svg';
+import PhotoIcon from '../images/about.svg';
+import EditingIcon from '../images/email.svg';
 import ContactIcon from '../images/contact.svg';
+
+import classes from './Navbar.module.css';
 
 const navbar = () => {
 
     const style = {
         navbar: {
             zIndex: '100',
+            position: 'fixed',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
             alignItems: 'center',
             height: '100vh',
             width: '75px',
-            // backgroundColor: '#3e2c75',
-            backgroundColor: '#FFF',
+            backgroundColor: '#ff4545',
             boxShadow: '2px 0px 2px 1px rgba(0, 0, 0, 0.2)',
             minWidth: '75px',
 
             '@media (max-width: 900px)': {
                 flexDirection: 'row',
+                justifyContent: 'space-between',
                 width: '100%',
                 height: '75px',
-                backgroundColor: 'red'
-            }
+            },
+
+            '@media (max-width: 768px)': {
+                justifyContent: 'flex-end'
+            },
         },
 
         iconDiv: {
             width: '100%',
 
             '@media (max-width: 900px)': {
-                width: '100x',
+                width: '100px',
+                minWidth: '100px',
                 height: '100%'
-            }
+            },
+
+            '@media (max-width: 768px)': {
+                display: 'none',
+            },
         },
 
         icon: {
@@ -51,11 +62,31 @@ const navbar = () => {
             flexDirection: 'column',
 
             '@media (max-width: 900px)': {
-                display: 'flex',
-                flexDirection: 'row',
-                height: '100%',
+                display: 'none',
+                // flexDirection: 'row',
+                // height: '100%',
                 // minWidth: '100%'
             }            
+        },
+
+        navItemClusterMobile: {
+            // width: '100%',
+            display: 'none',
+            flexDirection: 'column',
+
+            '@media (max-width: 900px)': {
+                display: 'flex',
+                flexDirection: 'row',
+                margin: '0',
+                padding: '0',
+                // height: '100%',
+                // minWidth: '100%'
+            }            
+        },
+
+        linkStyle: {
+            color: '#000    ',
+            textDecoration: 'none'
         },
 
         navItem: {
@@ -64,7 +95,10 @@ const navbar = () => {
 
             '@media (max-width: 900px)': {
                 display: 'flex',
-                justifyItems: 'center',
+                flexDirection: 'column',
+                // textAlign: 'center',
+                alignItems: 'center',
+                justifyContent: 'center',
                 width: '75px'
             }
         },
@@ -89,7 +123,7 @@ const navbar = () => {
         endItem: {
             width: '100%',
             height: '100%',
-            backgroundColor: '#FFF',
+            backgroundColor: '#ff4545',
         }
     }
 
@@ -102,7 +136,13 @@ const navbar = () => {
                 <Link to="/videography"><li style={style.navItem}><img style={style.navItemIcon} src={VideoIcon}></img></li></Link>
                 <Link to="/photography"><li style={style.navItem}><img style={style.navItemIcon} src={PhotoIcon}></img></li></Link>
                 <Link to="/editing"><li style={style.navItem}><img style={style.navItemIcon} src={EditingIcon}></img></li></Link>
-                <Link to="/contact"><li style={style.navItem}><img style={style.navItemIcon} src={ContactIcon}></img></li></Link>
+                {/* <Link to="/contact"><li style={style.navItem}><img style={style.navItemIcon} src={ContactIcon}></img></li></Link> */}
+            </ul>
+            <ul style={style.navItemClusterMobile}>
+                <Link to="/videography" style={style.linkStyle}><li style={style.navItem}>Home</li></Link>
+                <Link to="/photography" style={style.linkStyle}><li style={style.navItem}>Projects</li></Link>
+                <Link to="/editing" style={style.linkStyle}><li style={style.navItem}>About</li></Link>
+                {/* <Link to="/contact" style={style.linkStyle}><li style={style.navItem}>Contact</li></Link> */}
             </ul>
             <div style={style.endItemDiv}>
                 <div style={style.endItem}></div>

@@ -1,0 +1,17 @@
+/* .ContentDesktop {
+    display: block;
+}
+
+.ContentMobile {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .ContentDesktop {
+        display: none;
+    }
+    
+    .ContentMobile {
+        display: block;
+    }
+} */
