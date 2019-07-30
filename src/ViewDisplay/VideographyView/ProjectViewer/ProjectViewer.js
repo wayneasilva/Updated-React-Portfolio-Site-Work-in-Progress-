@@ -35,6 +35,7 @@ class ProjectViewer extends Component {
     // }
 
     portItemViewHandler = (id) => {
+        console.log(id)
         const portItemIndex = this.state.portItemViews.findIndex(view => {
             return view.id === id;
         })
@@ -66,7 +67,7 @@ class ProjectViewer extends Component {
         this.setState({
             portItemViews: portItemStates
         })
-        console.log(portItemStates);
+        // console.log(portItemStates);
     }
 
     render() {
