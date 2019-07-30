@@ -48,12 +48,15 @@ const videoView = (props) => {
         // }
     const style = {
         background: {
-            backgroundColor: '#000'
+            // backgroundColor: 'pink',
+            height: '100%',
+            // margin: '10px'
+            // padding: '10px'
         }
     }
 
     return (
-        <div>
+        <div style={style.background}>
             <ProjectViewer />
         </div>
     )

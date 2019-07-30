@@ -8,7 +8,8 @@ const projectViewerDisplay = (props) => {
     const style = {
         containerDiv: {
             width: '100%',
-            backgroundColor: 'yellow'
+            backgroundColor: 'black',
+            // margin: '10px'
         },
 
         viewH1: {

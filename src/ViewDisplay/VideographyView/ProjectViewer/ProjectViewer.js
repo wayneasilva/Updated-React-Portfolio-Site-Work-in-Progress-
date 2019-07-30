@@ -71,33 +71,35 @@ class ProjectViewer extends Component {
     }
 
     render() {
-        // const style = {
-        //     test: {
-        //         display: 'flex',
-        //         flexDirection: 'column',
-        //         // justifyContent: 'center',
-        //         // alignItems: 'center',
-        //         margin: '0',
-        //         padding: '0',
-        //         width: 'calc(100vw - 75px)',
-        //         height: '100vh',
-        //         backgroundColor: '#FFF'
-        //     },
+        const style = {
+            test: {
+                boxSizing: 'border-box',
+                display: 'flex',
+                flexDirection: 'row',
+                // justifyContent: 'center',
+                // alignItems: 'center',
+                margin: '0',
+                // padding: '10px',
+                width: '100%',
+                // width: 'calc(100vw - 75px)',
+                height: '100%',
+                backgroundColor: 'white'
+            },
     
-        //     porfolioViewDivStyle: {
-        //         width: 'calc(100vw - 75px)',
-        //         height: '90vh',
-        //         backgroundColor: '#FFF'
-        //     },
+            porfolioViewDivStyle: {
+                width: 'calc(100vw - 75px)',
+                // height: '90vh',
+                backgroundColor: '#FFF'
+            },
     
-        //     selectorDivStyle: {
-        //         width: 'calc(100vw - 75px)',
-        //         height: '10vh'
-        //     }
-        // }
+            selectorDivStyle: {
+                width: 'calc(100vw - 75px)',
+                // height: '10vh'
+            }
+        }
 
         return (
-            <div>
+            <div style={style.test}>
                 <ProjectViewerDisplay portItems={this.state.portItemViews} />
                 <ProjectViewerSelector
                     portItems={this.state.portItemViews} 

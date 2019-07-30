@@ -37,29 +37,29 @@ class ViewDisplay extends Component {
                 margin: '0',
                 padding: '0',
                 width: 'calc(100vw - 75px)',
+                height: '100vh',
                 marginLeft: '75px'
             },
 
-            portfolioDiv: {
-                backgroundColor: 'red',
-                height: '100%',
-                height: '100%'
-                // margin: '0',
-                // padding: '0',
-                // width: 'calc(100vw - 75px)',
-                // marginLeft: '75px'
-            },
+            // portfolioDiv: {
+            //     backgroundColor: 'red',
+            //     height: '100%'
+            //     // margin: '0',
+            //     // padding: '0',
+            //     // width: 'calc(100vw - 75px)',
+            //     // marginLeft: '75px'
+            // },
 
-            portfolioDivMobile: {
-                backgroundColor: 'blue',
-                height: '100%',
-                height: '100%'
-            },
+            // portfolioDivMobile: {
+            //     backgroundColor: 'blue',
+            //     height: '100%',
+            //     height: '100%'
+            // },
         }
 
         if (screenWidth < 900) {
             style.test.width = '100%';
-            style.test.height = 'calc(100% - 75px)';
+            style.test.height = 'calc(100vh - 75px)';
             style.test.marginLeft = '0';
             style.test.marginTop = '75px';
         }
