@@ -2,29 +2,30 @@ import React, { Component } from 'react';
 import Radium from 'radium';
 import ProjectViewerSelector from './ProjectViewerSelector/ProjectViewerSelector';
 import ProjectViewerDisplay from './ProjectViewerDisplay/ProjectViewerDisplay';
+import portImage1 from '../../../images/documentationjs.png';
 
 class ProjectViewer extends Component {
     state = {
         portItemViews: [
             {
                 id: '1',
-                name: 'First Project',
-                // img: `${portImage1}`,
+                name: 'Documentation.js',
+                img: `${portImage1}`,
                 about: 'We all have to start somewhere!',
-                isLoaded: false
+                isLoaded: true
             },
             {
                 id: '2',
                 name: 'Micro Clock Project',
                 // img: `${portImage2}`,
                 about: 'This program was a learning tool!',
-                isLoaded: true
+                isLoaded: false
             },
             {
                 id: '3',
-                name: 'Real Steel',
+                name: 'Burger Builder',
                 // img: `${portImage3}`,
-                about: ' lorem 3',
+                about: 'One of my assignments that taught me about the flow of data and clever state use in React!',
                 isLoaded: false
             }
         ]
@@ -78,12 +79,20 @@ class ProjectViewer extends Component {
                 flexDirection: 'row',
                 // justifyContent: 'center',
                 // alignItems: 'center',
-                margin: '0',
-                // padding: '10px',
-                width: '100%',
+                // margin: '100px',
+                padding: '10px',
+                // width: '75%',
                 // width: 'calc(100vw - 75px)',
                 height: '100%',
                 backgroundColor: 'white'
+            },
+
+            display: {
+                width: '50%'
+            },
+
+            selector: {
+                width: '50%'
             },
     
             porfolioViewDivStyle: {
@@ -99,9 +108,11 @@ class ProjectViewer extends Component {
         }
 
         return (
+            //change styles later
             <div style={style.test}>
-                <ProjectViewerDisplay portItems={this.state.portItemViews} />
+                <ProjectViewerDisplay style={style.display} portItems={this.state.portItemViews} />
                 <ProjectViewerSelector
+                    style={style.selector}
                     portItems={this.state.portItemViews} 
                     portViewHandler={this.portItemViewHandler} 
                 />

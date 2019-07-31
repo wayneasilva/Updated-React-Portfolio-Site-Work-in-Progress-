@@ -7,24 +7,52 @@ const projectViewerDisplay = (props) => {
 
     const style = {
         containerDiv: {
+            display: 'flex',
+            flexDirection: 'row',
             width: '100%',
-            backgroundColor: 'black',
+            // border: '1px solid black'
+            // backgroundColor: 'black',
             // margin: '10px'
         },
 
         viewH1: {
-            backgroundColor: 'red'
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
+            // backgroundColor: 'red',
+            margin: '0',
+            height: '25%'
         },
 
         viewP: {
-            backgroundColor: 'blue'
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
+            // backgroundColor: 'blue',
+            margin: '0',
+            height: '15%'
+        },
+
+        imgDiv: {
+            // backgroundColor: 'yellow',
+            width: '100%'
+        },
+
+        img: {
+            width: '100%',
+            height: '100%'
         }
     }
 
     return (
         <div style={style.containerDiv}>
-            <h1 style={style.viewH1}>{currentView[0].name}</h1>
-            <p style={style.viewP}>{currentView[0].about}</p>
+            <div>
+                <h1 style={style.viewH1}>{currentView[0].name}</h1>
+                <p style={style.viewP}>{currentView[0].about}</p>
+            </div>
+            <div style={style.imgDiv}>
+                <img src={currentView[0].img} style={style.img}></img>
+            </div>
         </div>
     )
 }

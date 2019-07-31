@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Radium from 'radium';
-import portImage1 from '../../images/portImage1.jpg';
-import portImage2 from '../../images/portImage2.jpg';
-import portImage3 from '../../images/portImage3.jpg';
+// import portImage1 from '../../images/portImage1.jpg';
+// import portImage2 from '../../images/portImage2.jpg';
+// import portImage3 from '../../images/portImage3.jpg';
 import ProjectViewer from './ProjectViewer/ProjectViewer';
 // import PortItemSelector from './PortItemSelector/PortItemSelector';
 // import MainViewDisplay from '../MainViewDisplay/MainViewDisplay.js';
@@ -48,9 +48,12 @@ const videoView = (props) => {
         // }
     const style = {
         background: {
-            // backgroundColor: 'pink',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
             height: '100%',
-            // margin: '10px'
+            // padding: '50px',
+            // margin: 'auto',
             // padding: '10px'
         }
     }

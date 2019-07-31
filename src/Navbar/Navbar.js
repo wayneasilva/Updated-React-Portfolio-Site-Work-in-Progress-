@@ -5,7 +5,7 @@ import MainIcon from '../images/user.svg';
 import VideoIcon from '../images/github-logo.svg';
 import PhotoIcon from '../images/about.svg';
 import EditingIcon from '../images/email.svg';
-import ContactIcon from '../images/contact.svg';
+// import ContactIcon from '../images/contact.svg';
 
 import classes from './Navbar.module.css';
 
